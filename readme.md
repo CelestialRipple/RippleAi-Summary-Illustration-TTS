@@ -24,7 +24,7 @@
 ```shell
 # 安装RippleGPT后端
  
- npm i RippleGPT
+npm i ripplegpt
 
 # 填入OpenAI KEY
 nano app.js
