@@ -37,3 +37,10 @@ node app.js
 
 * [Python] + [Node]
 * [PHP] + [HTML] + [CSS]
+
+## :gear: 扩展
+🤖️ 你可以把Midjourney接入[机器人](https://github.com/CelestialRipple/Midjourney-bot)！
+
+## :scroll: 许可证
+
+MIT
