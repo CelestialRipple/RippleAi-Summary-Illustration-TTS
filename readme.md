@@ -8,8 +8,9 @@
   <br>
 </h1>
 <h4 align="center">Auto generate summary / illustration by RippleGPT.</h4>
-##  特性
 
+
+## :sparkles: 特性
 * ✨ 简洁、美观的前端样式，响应式设计
 * 👋 轻松上手，高可定制
 * 💾 针对PJAX进行兼容
