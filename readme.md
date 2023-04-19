@@ -2,7 +2,7 @@
 
 <h1 align="center">
   <br>
-  <a href="https://hiripple.com/" alt="logo" ><img src="https://raw.githubusercontent.com/CelestialRipple/AI-Summary/main/icon-min.svg?token=GHSAT0AAAAAAB4VYILBXWYJ6IDDQICT4MPUZB7UUUA" width="150"/></a>
+  <a href="https://hiripple.com/" alt="logo" ><img src="https://raw.githubusercontent.com/CelestialRipple/AI-Summary/main/icon-min.svg" width="150"/></a>
   <br>
   RippleGPT
   <br>
