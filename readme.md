@@ -2,12 +2,12 @@
 
 <h1 align="center">
   <br>
-  <a href="https://hiripple.com/" alt="logo" ><img src="https://raw.githubusercontent.com/CelestialRipple/AI-Summary/main/icon-min.svg" width="150"/></a>
+  <a href="https://hiripple.com/" alt="logo" ><img src="https://raw.githubusercontent.com/CelestialRipple/RippleAi-Summary-Illustration-TTS/main/icon-min.svg" width="150"/></a>
   <br>
-  RippleGPT
+  RippleAi
   <br>
 </h1>
-<h4 align="center">Auto generate summary / illustration by RippleGPT.</h4>
+<h4 align="center">Auto generate summary / illustration / TTS by RippleAi.</h4>
 
 
 ## :sparkles: 特性
@@ -17,6 +17,7 @@
 * 📚 使用数据库，避免API进行重复请求
 * 💻 CDN功能，允许服务器缓存图片后发送（避免GFW拦截）
 * 🔐 可设置跨域限制，防盗用
+* 🗣️ 集成GPT、Midjourney、VITS
 
 ## :hammer_and_wrench: 快速开始 
 
