@@ -1,1 +1,124 @@
 
+html {
+  height: 100%;
+  width: 100%;
+}
+.ripple-ai {
+border: 1px solid #000;
+border-radius: 1rem;
+padding: 1rem;
+position: relative;
+}
+
+.ripple-ai-header {
+align-items: center;
+display: flex;
+}
+
+.Aisummary {
+background-image: linear-gradient(30deg, #000000, #00a389);
+color: transparent;
+background-clip: text;
+-webkit-background-clip: text;
+font-weight: 990;
+}
+
+.ai-icon {
+border: none;
+border-radius: 50%;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
+height: 35px;
+margin-right: 5px;
+vertical-align: middle;
+width: 35px;
+}
+
+.ripple-ai-title {
+font-weight: 700;
+margin: 0;
+}
+
+.ripple-ai-btn {
+align-items: center;
+background-color: #000;
+border: 1px solid;
+color: #fff;
+cursor: pointer;
+display: inline-flex;
+font-weight: 500;
+height: 2rem;
+justify-content: center;
+margin-left: 10px;
+min-width: 100px;
+padding: 0 1.25rem;
+border-radius: 10px;
+}
+
+.ripple-ai-content {
+font-size: 14px;
+line-height: 1.5;
+margin: 10px 0;
+}
+
+.powered-by {
+bottom: 0;
+font-size: 10px;
+font-weight: bold;
+position: absolute;
+right: 5px;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+.rotating {
+  animation: rotating 1s linear infinite;
+}
+
+接下来，将所有CSS样式移至单独的CSS文件，如下所示：
+
+```css
+.summary-button {
+  color: #FFFFFF;
+  cursor: pointer;
+  background-color: #000000;
+  border: 1px solid;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 2rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  min-width: 100px;
+  border-radius: 10px;
+  font-weight: 500;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  padding-top: 5px;
+  display: none;
+}
+
+@keyframes blinking {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.blinking {
+  animation: blinking 1s infinite;
+}
+
+.rotating {
+  animation: rotating 2s linear infinite;
+}
+
+@keyframes rotating {
+  100% {
+    transform: rotate(360deg);
+  }
+}
