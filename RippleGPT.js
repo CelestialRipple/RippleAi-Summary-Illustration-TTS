@@ -1,3 +1,11 @@
+/*
+Name: RippleAi
+Author: Ripple
+Author URI: https://hiripple.com/
+Version: 1.0.0
+License: GNU General Public License v3.0
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+*/
 let audioLoaded = false;
 const RippleGPT = {
   getTitleAndContent: function () {
