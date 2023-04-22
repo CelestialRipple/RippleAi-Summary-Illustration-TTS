@@ -22,7 +22,7 @@ const RippleGPT = {
   },
 
   fetchRippleGPT: async function(content) {
-    const apiUrl = 'https://api.hiripple.com/api/aisummary';
+    const apiUrl = GPT_URL + 'api/aisummary';
     const timeout = 500000;
 
     try {
@@ -56,7 +56,7 @@ const RippleGPT = {
   },
 };
 async function fetchAudio(text) {
-  const url = "https://vits.hiripple.com/models/hogwarts/speakers/0";
+  const url = VITS_URL;
   const data = {
     text: text,
     language: "简体中文",
@@ -121,7 +121,7 @@ function runRippleGPT() {
   rippleAiDiv.innerHTML = `
     <div class="ripple-ai-header flex items-center">
       <a href="https://github.com/CelestialRipple/AI-Summary" target="_blank">
-        <img src="https://raw.githubusercontent.com/CelestialRipple/RippleAi-Summary-Illustration-TTS/main/icon-RippleGPT.png?token=GHSAT0AAAAAAB4VYILAG5SKQ5ZLDF5WL746ZCCCENQ" alt="AI icon" class="ai-icon">
+        <img src="https://s2.loli.net/2023/04/22/xU5RgXC4Ww7Jihz.png" alt="AI icon" class="ai-icon">
       </a>
       <span class="Aisummary"> AI 生成的摘要</span>
       <button class="ripple-ai-btn">AI 插图</button>
@@ -134,8 +134,8 @@ function runRippleGPT() {
 const cyberContainerHtml = `
   <div class="cyber-container" onclick="fetchAudioAndPlay()" style="cursor: pointer;"><div class="cyber-banner-short bg-purple fg-white mt-4"><span class="cyber-text">让大名鼎鼎的V为您介绍！</span>
     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-  </div> <div class="image-container" style="z-index: 1;">
-    <img src="https://myripple.cc/uploads/2023/04/1681997903-V-removebg-preview-2.png" style="max-height: 60px; max-width: 60px; margin-left: -60px;">
+  </div> <div class="image-container" style="z-index: 1;margin-left: -60px;">
+    <img src="https://s2.loli.net/2023/04/22/eBdQRgcw7uyD8tX.png" style="max-height: 60px; max-width: 60px;">
   </div></div>
 `;
   const content = RippleGPT.getTitleAndContent();
@@ -194,7 +194,7 @@ setTimeout(() => {
     aiIcon.classList.remove('rotating');
     const promptContent = aiSummaryTarget.innerText;
 
-    fetch('https://api.hiripple.com/api/aiprompt', {
+    fetch(GPT_URL + 'api/aiprompt', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -210,7 +210,7 @@ setTimeout(() => {
       })
       .then(data => {
         aiButton.innerHTML = 'Midjourney绘制中';
-        return fetch('https://mj.hiripple.com/api/send_and_receive?cdn=true', {
+        return fetch(MJ_URL, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
