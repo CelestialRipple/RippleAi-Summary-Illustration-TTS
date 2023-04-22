@@ -1,3 +1,12 @@
+/*
+Name: RippleAi
+Author: Ripple
+Author URI: https://hiripple.com/
+Version: 1.0.0
+License: GNU General Public License v3.0
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+*/
+
 :root 
 {
     --root-font-size: 18px;
@@ -42,7 +51,7 @@
 .cyber-banner,
 .cyber-banner-short
 {
-    width: 100%;
+  width: 120%;
 height: 25px;
 background-repeat: no-repeat;
 font-size: 1rem;
@@ -123,7 +132,7 @@ Note: Inline svg shit doesnt work sometimes. Make sure to optimize it with https
     display: flex;
 justify-content: flex-end;
 align-items: flex-end;
-margin-top: -30px;
+margin-top: -60px;
   cursor: pointer;
   opacity: 0;
 }
@@ -147,6 +156,7 @@ display: flex;
 }
 
 .Aisummary {
+  margin-right: 10px;
 background-image: linear-gradient(30deg, #000000, #00a389);
 color: transparent;
 background-clip: text;
@@ -185,11 +195,6 @@ padding: 0 1.25rem;
 border-radius: 10px;
 }
 
-.ripple-ai-content {
-font-size: 14px;
-line-height: 1.5;
-margin: 10px 0;
-}
 
 .powered-by {
 bottom: -5px;
