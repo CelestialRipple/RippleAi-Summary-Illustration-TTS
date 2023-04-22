@@ -129,7 +129,7 @@ function runRippleGPT() {
   rippleAiDiv.innerHTML = `
     <div class="ripple-ai-header flex items-center">
       <a href="https://github.com/CelestialRipple/AI-Summary" target="_blank">
-        <img src="https://s2.loli.net/2023/04/22/xU5RgXC4Ww7Jihz.png" alt="AI icon" class="ai-icon">
+        <img src="https://myripple.cc/uploads/2023/04/1681875518-icon-RippleGPT.png" class="ai-icon">
       </a>
       <span class="Aisummary"> AI 生成的摘要</span>
       <button class="ripple-ai-btn">AI 插图</button>
@@ -143,7 +143,7 @@ const cyberContainerHtml = `
   <div class="cyber-container" onclick="fetchAudioAndPlay()" style="cursor: pointer;"><div class="cyber-banner-short bg-purple fg-white mt-4"><span class="cyber-text">让大名鼎鼎的V为您介绍！</span>
     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
   </div> <div class="image-container" style="z-index: 1;margin-left: -60px;">
-    <img src="https://s2.loli.net/2023/04/22/eBdQRgcw7uyD8tX.png" style="max-height: 60px; max-width: 60px;">
+    <img src="https://myripple.cc/uploads/2023/04/1681997903-V-removebg-preview-2.png" style="max-height: 60px; max-width: 60px;">
   </div></div>
 `;
   const content = RippleGPT.getTitleAndContent();
@@ -217,7 +217,7 @@ setTimeout(() => {
         }
       })
       .then(data => {
-        aiButton.innerHTML = 'Midjourney绘制中';
+        aiButton.innerHTML = 'Mj绘制中';
         return fetch(MJ_URL, {
           method: 'POST',
           headers: {
