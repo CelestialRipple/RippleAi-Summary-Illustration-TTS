@@ -112,9 +112,6 @@ font-style: italic;
     background-size: cover;
 }
 
-/*
-Note: Inline svg shit doesnt work sometimes. Make sure to optimize it with https://jakearchibald.github.io/svgomg/ (import and download)
-*/
 .cyber-banner::before
 {
     width: 405px;
@@ -126,7 +123,6 @@ Note: Inline svg shit doesnt work sometimes. Make sure to optimize it with https
     width: 220px;
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="220" height="50"><path d="m0 0-10 50h20L35 0zM37 0 12 50h18L55 0zM59 0 34 50h16L75 0zM81 0 56 50h14L95 0zM103 0 78 50h12l25-50zM125 0l-25 50h10l25-50zM147 0l-25 50h8l25-50zM169 0l-25 50h6l25-50zM191 0l-25 50h4l25-50zM213 0l-25 50h2l25-50z"/></svg>')
 }
-/*#endregion*/
 .cyber-container
 {
     display: flex;
@@ -137,12 +133,6 @@ margin-top: -60px;
   opacity: 0;
 }
 
-
-
-html {
-  height: 100%;
-  width: 100%;
-}
 .ripple-ai {
 border: 1px solid #000;
 border-radius: 1rem;
@@ -230,58 +220,6 @@ right: 5px;
   animation: rotating 2s linear infinite;
 }
 
-
-.play-pause-btn {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  outline: none;
-  padding: 0;
-  width: 24px;
-  height: 24px;
-}
-
-.play-pause-btn svg {
-  display: block;
-}
-.RippleAi-audio-player {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 5px 0;
-}
-
-.play-pause-btn {
-  margin-bottom: 5px;
-}
-
-.progress-bar {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 90%; /* 改为90%，以便适应容器宽度 */
-  height: 5px;
-  background: transparent;
-  outline: none;
-  margin: 0 5%; /* 添加左右边距以使进度条居中 */
-}
-
-.progress-bar::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 16px;
-  height: 16px;
-  background: #000;
-  cursor: pointer;
-  border-radius: 50%;
-}
-
-.progress-bar::-moz-range-thumb {
-  width: 16px;
-  height: 16px;
-  background: #000;
-  cursor: pointer;
-  border-radius: 50%;
-}
 .fade-in-animation {
   animation: fadeIn 1s ease-out forwards;
 }
