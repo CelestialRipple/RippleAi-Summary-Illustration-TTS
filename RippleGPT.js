@@ -1,3 +1,4 @@
+let audioLoaded = false;
 const RippleGPT = {
   getTitleAndContent: function () {
     const title = document.title;
@@ -54,6 +55,65 @@ const RippleGPT = {
     }
   },
 };
+async function fetchAudio(text) {
+  const url = "https://vits.hiripple.com/models/hogwarts/speakers/0";
+  const data = {
+    text: text,
+    language: "简体中文",
+    speed: 0.8,
+    noise_scale: 0.2,
+    noise_scale_w: 0.668
+  };
+
+  try {
+    const response = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    });
+
+    if (response.ok) {
+      const audioData = await response.json();
+      return audioData.url;
+    } else {
+      throw new Error("请求失败");
+    }
+  } catch (error) {
+    console.error("请求失败：", error);
+  }
+}
+
+async function fetchAudioAndPlay() {
+  if (audioLoaded) {
+    return;
+  }
+  const aiSummaryTarget = document.querySelector(".ai-summary-target");
+  const cyberText = document.querySelector(".cyber-text");
+  const preparingText = document.createElement("span");
+  preparingText.innerText = "准备中...";
+  preparingText.classList.add("blinking");
+  cyberText.innerHTML = ""; // 先清空原来的文字
+  cyberText.appendChild(preparingText);
+  // 获取音频链接
+  const audioUrl = await fetchAudio(aiSummaryTarget.innerText);
+
+  // 使用系统默认音频播放器
+  const audioElement = document.createElement("audio");
+  audioElement.src = audioUrl;
+  audioElement.controls = true;
+  audioElement.style.height = "30px";
+  audioElement.style.width = "50%";
+  cyberText.removeChild(preparingText); // 移除 "准备中..." 文字
+  // 将音频元素插入到 cyberText 元素
+  cyberText.appendChild(audioElement);
+  audioLoaded = true;
+}
+
+
+
+
 
 function runRippleGPT() {
   const rippleAiDiv = document.querySelector('.ripple-ai.mt-4');
@@ -70,6 +130,14 @@ function runRippleGPT() {
     <div class="powered-by">powered by RippleAi</div>
   `;
 
+
+const cyberContainerHtml = `
+  <div class="cyber-container" onclick="fetchAudioAndPlay()" style="cursor: pointer;"><div class="cyber-banner-short bg-purple fg-white mt-4"><span class="cyber-text">让大名鼎鼎的V为您介绍！</span>
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  </div> <div class="image-container" style="z-index: 1;">
+    <img src="https://myripple.cc/uploads/2023/04/1681997903-V-removebg-preview-2.png" style="max-height: 60px; max-width: 60px; margin-left: -60px;">
+  </div></div>
+`;
   const content = RippleGPT.getTitleAndContent();
  const aiSummaryTarget = document.querySelector('.ai-summary-target');
   const aiButton = document.querySelector('.ripple-ai-btn');
@@ -101,10 +169,22 @@ RippleGPT.fetchRippleGPT(content).then(summary => {
     waitUntilVisible: true,
   }).go();
 
-  setTimeout(() => {
+ setTimeout(() => {
     aiButton.style.display = 'inline-block';
-      aiIcon.classList.remove('rotating');
-  }, summary.length * 50);
+    aiIcon.classList.remove('rotating');
+    
+    // 将新的 HTML 块插入到页面中
+    const cyberContainerDiv = document.createElement('div');
+    cyberContainerDiv.innerHTML = cyberContainerHtml;
+    rippleAiDiv.appendChild(cyberContainerDiv);
+
+// 添加从左侧淡入的动画
+setTimeout(() => {
+  const cyberContainer = cyberContainerDiv.querySelector('.cyber-container');
+  cyberContainer.classList.add('fade-in-animation');
+}, 500);
+
+  }, summary.length * 60);
 
   aiButton.addEventListener('click', () => {
     aiButton.disabled = true;
@@ -183,4 +263,3 @@ RippleGPT.fetchRippleGPT(content).then(summary => {
   });
 
 });}
-
