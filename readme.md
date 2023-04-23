@@ -1,5 +1,3 @@
-[中文版本](https://github.com/)
-
 <h1 align="center">
   <br>
   <a href="https://hiripple.com/" alt="logo" ><img src="https://raw.githubusercontent.com/CelestialRipple/RippleAi-Summary-Illustration-TTS/main/icon-min.svg" width="150"/></a>
