@@ -22,19 +22,67 @@
 
 ## :hammer_and_wrench: 快速开始 
 
-
-```shell
-# 安装RippleGPT后端
- 
-npm i ripplegpt
-
-# 填入OpenAI KEY
-nano app.js
-
-# 启动
-node app.js
+### 在需要的地方插入以下html即可～
+```html
+<div class="ripple-ai mt-4">
+</div>
+<link href="/path/to/ripplegpt.css" rel="stylesheet" type="text/css" />
+  <script>
+let RippleGPT_postSelector = '.gridContainer';
+let GPT_URL = 'https://api.example.com/';
+let MJ_URL= 'https://api.example.com/send_and_receive';
+let VITS_URL= 'https://api.example.com/models/${path}/speakers/${id}';
+</script>
+  <script src="/path/to/ripplegpt.js"></script>
+  <script src="/path/to/typeit.min.js"></script>
+<script>document.addEventListener('DOMContentLoaded', function() {
+  runRippleGPT();
+});
+</script>
 ```
 
+### cdn（不保证可用）
+
+```html
+<div class="ripple-ai mt-4">
+</div>
+<link href="https://myripple.cc/cdn/RippleGPT.css" rel="stylesheet" type="text/css" />
+  <script>
+let RippleGPT_postSelector = '.gridContainer';
+let GPT_URL = 'https://api.example.com/';
+let MJ_URL= 'https://api.example.com/send_and_receive';
+let VITS_URL= 'https://api.example.com/models/${path}/speakers/${id}';
+</script>
+  <script src="https://myripple.cc/cdn/RippleGPT.js"></script>
+  <script src="https://myripple.cc/cdn/typeit.min.js"></script>
+<script>document.addEventListener('DOMContentLoaded', function() {
+  runRippleGPT();
+});
+</script>
+```
+### PJAX兼容（Wordpress为例）
+
+```PHP
+/* 容器外部(footer.php) */	
+# 容器外部
+  <script src="https://myripple.cc/cdn/RippleGPT.js"></script>
+					<script>
+	runRippleGPT();
+</script>
+/* 容器内部（single.php) */	
+<link href="https://myripple.cc/cdn/RippleGPT.css" rel="stylesheet" type="text/css" />
+  <script>
+let RippleGPT_postSelector = '.gridContainer';
+let GPT_URL = 'https://api.example.com/';
+let MJ_URL= 'https://api.example.com/send_and_receive';
+let VITS_URL= 'https://api.example.com/models/${path}/speakers/${id}';
+</script>
+```
+
+## 后端搭建
+- [node](https://github.com/CelestialRipple/RippleAi-Summary-Illustration-TTS/tree/main/node-server)
+- [Python(midjourney）](https://github.com/CelestialRipple/RippleAi-Summary-Illustration-TTS/tree/main/python-server)
+- [Python(vits）](https://github.com/CelestialRipple/RippleAi-Summary-Illustration-TTS/tree/main/python-server/VITS-server)
 ## :alembic: 技术栈
 
 * [Python] + [Node]
