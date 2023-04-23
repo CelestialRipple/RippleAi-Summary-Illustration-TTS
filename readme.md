@@ -105,7 +105,7 @@ let VITS_URL= 'https://api.example.com/models/${path}/speakers/${id}';
 - 👍🏻 联系&合作&捐赠：support@hiripple.com
 - ⚡️ 未来计划：更多的VITS样式、Midjourney upscale功能
 
-## :scroll: 许可证
+## :scroll: License
 
 - MIT
 - 你可以删去右下角的powered by rippleai，当必须保留左上角的图标以及超链接
