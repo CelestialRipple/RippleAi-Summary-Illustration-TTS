@@ -68,7 +68,6 @@ let VITS_URL= 'https://api.example.com/models/${path}/speakers/${id}';
 
 ```PHP
 /* 容器外部(footer.php) */	
-# 容器外部
   <script src="https://myripple.cc/cdn/RippleGPT.js"></script>
 					<script>
 	runRippleGPT();
