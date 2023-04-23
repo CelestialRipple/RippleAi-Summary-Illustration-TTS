@@ -98,4 +98,5 @@ let VITS_URL= 'https://api.example.com/models/${path}/speakers/${id}';
 
 ## :scroll: 许可证
 
-MIT
+- MIT
+- 你可以删去右下角的powered by rippleai，当必须保留左上角的图标以及超链接
