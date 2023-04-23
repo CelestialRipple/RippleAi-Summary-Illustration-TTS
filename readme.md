@@ -6,6 +6,10 @@
   <br>
 </h1>
 <h4 align="center">Auto generate summary / illustration / TTS by RippleAi.</h4>
+<p align="center">
+  <a href="https://hiripple.com">Blog/Live Demo</a> •
+  <a href="#scroll-License">License</a>
+</p>
 
 ## Demo
  ### desktop
