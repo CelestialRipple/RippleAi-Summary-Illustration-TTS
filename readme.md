@@ -8,10 +8,11 @@
 <h4 align="center">Auto generate summary / illustration / TTS by RippleAi.</h4>
 
 ## Demo
-<br>
-  <a href="https://hiripple.com/" alt="logo" ><img src="https://raw.githubusercontent.com/CelestialRipple/RippleAi-Summary-Illustration-TTS/main/trial.gif?token=GHSAT0AAAAAAB4VYILA6RALXIFHJKHMMQZGZCEZNLQ"  /></a>
   <br>
+  <a href="https://hiripple.com/" alt="logo" ><img src="https://raw.githubusercontent.com/CelestialRipple/RippleAi-Summary-Illustration-TTS/main/trial.gif?token=GHSAT0AAAAAAB4VYILA6RALXIFHJKHMMQZGZCEZNLQ"  /></a>
+  <br><img width="632" alt="desktop" src="https://user-images.githubusercontent.com/115361435/233821319-e6b0afa7-9ff0-4d5a-b529-8829eb40a2ad.png">
 
+<br><img width="348" alt="mobie" src="https://user-images.githubusercontent.com/115361435/233821304-2a2e9748-3aa6-45a1-8b2a-edf188ccbb27.png">
 
 ## :sparkles: 特性
 * 🤖 自动生成，无需人工干预
