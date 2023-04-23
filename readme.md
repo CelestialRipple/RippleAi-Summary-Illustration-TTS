@@ -9,7 +9,7 @@
 
 ## Demo
 <br>
-  <a href="https://hiripple.com/" alt="logo" ><img src="https://raw.githubusercontent.com/CelestialRipple/RippleAi-Summary-Illustration-TTS/main/trial.gif?token=GHSAT0AAAAAAB4VYILA6RALXIFHJKHMMQZGZCEZNLQ" width="150"/></a>
+  <a href="https://hiripple.com/" alt="logo" ><img src="https://raw.githubusercontent.com/CelestialRipple/RippleAi-Summary-Illustration-TTS/main/trial.gif?token=GHSAT0AAAAAAB4VYILA6RALXIFHJKHMMQZGZCEZNLQ" /></a>
   <br>
 
 
