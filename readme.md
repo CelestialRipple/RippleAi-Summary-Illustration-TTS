@@ -99,6 +99,10 @@ let VITS_URL= 'https://api.example.com/models/${path}/speakers/${id}';
 - [Python(midjourney）](https://github.com/CelestialRipple/RippleAi-Summary-Illustration-TTS/tree/main/python-server)
 - [Python(vits）](https://github.com/CelestialRipple/RippleAi-Summary-Illustration-TTS/tree/main/python-server/VITS-server)
 
+## 🤔设计思路
+![weixin](https://user-images.githubusercontent.com/115361435/233846512-2b47b748-ab0b-4ba7-a7b8-b8c5118c2caa.png)
+
+
 ## :alembic: 技术栈
 
 * [Python] + [Node]
