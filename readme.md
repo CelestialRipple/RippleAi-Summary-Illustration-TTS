@@ -7,6 +7,11 @@
 </h1>
 <h4 align="center">Auto generate summary / illustration / TTS by RippleAi.</h4>
 
+## Demo
+<br>
+  <a href="https://hiripple.com/" alt="logo" ><img src="https://raw.githubusercontent.com/CelestialRipple/RippleAi-Summary-Illustration-TTS/main/trial.gif?token=GHSAT0AAAAAAB4VYILA6RALXIFHJKHMMQZGZCEZNLQ" width="150"/></a>
+  <br>
+
 
 ## :sparkles: 特性
 * 🤖 自动生成，无需人工干预
