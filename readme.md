@@ -22,13 +22,17 @@
 
 ## :hammer_and_wrench: 快速开始 
 
-### 在需要的地方插入以下html即可～
+### 根据html结构找出正文对应的class
+
+例如我的博客正文被class="entry-content"包裹，那么let RippleGPT_postSelector = '.entry-content';
+
+### 在需要的地方插入html即可～
 ```html
 <div class="ripple-ai mt-4">
 </div>
 <link href="/path/to/ripplegpt.css" rel="stylesheet" type="text/css" />
   <script>
-let RippleGPT_postSelector = '.gridContainer';
+let RippleGPT_postSelector = '文章正文';
 let GPT_URL = 'https://api.example.com/';
 let MJ_URL= 'https://api.example.com/send_and_receive';
 let VITS_URL= 'https://api.example.com/models/${path}/speakers/${id}';
@@ -48,7 +52,7 @@ let VITS_URL= 'https://api.example.com/models/${path}/speakers/${id}';
 </div>
 <link href="https://myripple.cc/cdn/RippleGPT.css" rel="stylesheet" type="text/css" />
   <script>
-let RippleGPT_postSelector = '.gridContainer';
+let RippleGPT_postSelector = '文章正文';
 let GPT_URL = 'https://api.example.com/';
 let MJ_URL= 'https://api.example.com/send_and_receive';
 let VITS_URL= 'https://api.example.com/models/${path}/speakers/${id}';
@@ -72,7 +76,7 @@ let VITS_URL= 'https://api.example.com/models/${path}/speakers/${id}';
 /* 容器内部（single.php) */	
 <link href="https://myripple.cc/cdn/RippleGPT.css" rel="stylesheet" type="text/css" />
   <script>
-let RippleGPT_postSelector = '.gridContainer';
+let RippleGPT_postSelector = '文章正文';
 let GPT_URL = 'https://api.example.com/';
 let MJ_URL= 'https://api.example.com/send_and_receive';
 let VITS_URL= 'https://api.example.com/models/${path}/speakers/${id}';
@@ -83,6 +87,7 @@ let VITS_URL= 'https://api.example.com/models/${path}/speakers/${id}';
 - [node](https://github.com/CelestialRipple/RippleAi-Summary-Illustration-TTS/tree/main/node-server)
 - [Python(midjourney）](https://github.com/CelestialRipple/RippleAi-Summary-Illustration-TTS/tree/main/python-server)
 - [Python(vits）](https://github.com/CelestialRipple/RippleAi-Summary-Illustration-TTS/tree/main/python-server/VITS-server)
+
 ## :alembic: 技术栈
 
 * [Python] + [Node]
@@ -90,6 +95,9 @@ let VITS_URL= 'https://api.example.com/models/${path}/speakers/${id}';
 
 ## :gear: 扩展
 🤖️ 你可以把Midjourney接入[机器人](https://github.com/CelestialRipple/Midjourney-bot)！
+👶🏿 本项目处于最初阶段，基于作者自己的WP主题开发，可能存在较多的BUG与兼容性问题，欢迎提出ISSUE！
+👍🏻 联系&合作&捐赠：support@hiripple.com
+⚡️ 未来计划：更多的VITS样式、Midjourney upscale功能
 
 ## :scroll: 许可证
 
