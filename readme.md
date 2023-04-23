@@ -94,10 +94,10 @@ let VITS_URL= 'https://api.example.com/models/${path}/speakers/${id}';
 * [PHP] + [HTML] + [CSS]
 
 ## :gear: 扩展
-🤖️ 你可以把Midjourney接入[机器人](https://github.com/CelestialRipple/Midjourney-bot)！
-👶🏿 本项目处于最初阶段，基于作者自己的WP主题开发，可能存在较多的BUG与兼容性问题，欢迎提出ISSUE！
-👍🏻 联系&合作&捐赠：support@hiripple.com
-⚡️ 未来计划：更多的VITS样式、Midjourney upscale功能
+- 🤖️ 你可以把Midjourney接入[机器人](https://github.com/CelestialRipple/Midjourney-bot)！
+- 👶🏿 本项目处于最初阶段，基于作者自己的WP主题开发，可能存在较多的BUG与兼容性问题，欢迎提出ISSUE！
+- 👍🏻 联系&合作&捐赠：support@hiripple.com
+- ⚡️ 未来计划：更多的VITS样式、Midjourney upscale功能
 
 ## :scroll: 许可证
 
