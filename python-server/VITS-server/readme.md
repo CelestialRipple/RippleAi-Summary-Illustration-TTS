@@ -18,7 +18,7 @@ python setup.py build_ext --inplace
 cd VITS-fast-fine-tuning/tts_web_api/models/
 mkdir /YOUR_MODELS_NAME
 cd /YOUR_MODELS_NAME
-wget “模型链接” //如果想直接下载V的模型，可输入gdown --id 15A96uS8yqkgciGcsvVdbFUcxI6-YfEY4
+wget “模型链接” # 如果想直接下载V的模型，可输入gdown --id 15A96uS8yqkgciGcsvVdbFUcxI6-YfEY4
 
 
 # 启动
