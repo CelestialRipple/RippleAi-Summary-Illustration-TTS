@@ -79,6 +79,11 @@ let VITS_URL= 'https://api.example.com/models/${path}/speakers/${id}';
 					<script>
 	runRippleGPT();
 </script>
+<script>
+ $(document).on('pjax:complete', function() {
+		runRippleGPT();
+    });
+</script>
 /* 容器内部（single.php) */	
 <link href="https://myripple.cc/cdn/RippleGPT.css" rel="stylesheet" type="text/css" />
   <script>
