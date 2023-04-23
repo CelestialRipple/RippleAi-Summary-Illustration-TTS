@@ -1,4 +1,7 @@
 # Python后端（Midjourney）安装步骤：
+
+详细说明请参考https://github.com/CelestialRipple/Midjourney_api
+
 ```shell
 # clone代码
 git clone https://github.com/CelestialRipple/RippleAi-Summary-Illustration-TTS/tree/main/python-server
