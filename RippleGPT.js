@@ -6,7 +6,6 @@ Version: 1.0.0
 License: GNU General Public License v3.0
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 */
-let audioLoaded = false;
 const RippleGPT = {
   getTitleAndContent: function () {
     const title = document.title;
@@ -94,9 +93,8 @@ async function fetchAudio(text) {
 }
 
 async function fetchAudioAndPlay() {
-  if (audioLoaded) {
-    return;
-  }
+  const cyberContainer = document.getElementById("cyber-container");
+  cyberContainer.onclick = null; // 取消容器的点击属性
   const aiSummaryTarget = document.querySelector(".ai-summary-target");
   const cyberText = document.querySelector(".cyber-text");
   const preparingText = document.createElement("span");
@@ -116,7 +114,6 @@ async function fetchAudioAndPlay() {
   cyberText.removeChild(preparingText); // 移除 "准备中..." 文字
   // 将音频元素插入到 cyberText 元素
   cyberText.appendChild(audioElement);
-  audioLoaded = true;
 }
 
 
@@ -140,7 +137,7 @@ function runRippleGPT() {
 
 
 const cyberContainerHtml = `
-  <div class="cyber-container" onclick="fetchAudioAndPlay()" style="cursor: pointer;"><div class="cyber-banner-short bg-purple fg-white mt-4"><span class="cyber-text">让大名鼎鼎的V为您介绍！</span>
+  <div id="cyber-container" class="cyber-container" onclick="fetchAudioAndPlay()" style="cursor: pointer;"><div class="cyber-banner-short bg-purple fg-white mt-4"><span class="cyber-text">让大名鼎鼎的V为您介绍！</span>
     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
   </div> <div class="image-container" style="z-index: 1;margin-left: -60px;">
     <img src="https://myripple.cc/uploads/2023/04/1681997903-V-removebg-preview-2.png" style="max-height: 60px; max-width: 60px;">
