@@ -63,10 +63,11 @@ const RippleGPT = {
   },
 };
 async function fetchAudio(text) {
+  const result = processText(text);
   const url = VITS_URL;
   const data = {
-    text: text,
-    language: "简体中文",
+    text: result.processedText,
+    language: result.language,
     speed: 0.8,
     noise_scale: 0.2,
     noise_scale_w: 0.668
@@ -91,6 +92,63 @@ async function fetchAudio(text) {
     console.error("请求失败：", error);
   }
 }
+
+function isChinese(char) {
+  const charCode = char.charCodeAt(0);
+  return (charCode >= 0x4E00 && charCode <= 0x9FFF) || (charCode >= 0x3000 && charCode <= 0x303F);
+}
+
+function processText(text) {
+  let processedText = "";
+  let prevCharType = null;
+  let language;
+  let isChineseDetected = false;
+  let isEnglishDetected = false;
+
+  for (const char of text) {
+    const isCharChinese = isChinese(char) || /[\u3000-\u303F\uFF00-\uFFEF]/.test(char);
+
+    if (isCharChinese) {
+      isChineseDetected = true;
+      if (prevCharType !== "zh") {
+        if (prevCharType === "en") {
+          processedText += "[EN]";
+        }
+        processedText += "[ZH]";
+        prevCharType = "zh";
+      }
+    } else {
+      isEnglishDetected = true;
+      if (prevCharType !== "en") {
+        if (prevCharType === "zh") {
+          processedText += "[ZH]";
+        }
+        processedText += "[EN]";
+        prevCharType = "en";
+      }
+    }
+
+    processedText += char;
+  }
+
+  if (isChineseDetected && isEnglishDetected) {
+    if (prevCharType === "zh") {
+      processedText += "[ZH]";
+    } else if (prevCharType === "en") {
+      processedText += "[EN]";
+    }
+    language = "Mix";
+  } else if (isChineseDetected) {
+    processedText = text;
+    language = "简体中文";
+  } else {
+    processedText = text;
+    language = "English";
+  }
+
+  return { processedText, language };
+}
+
 
 async function fetchAudioAndPlay() {
   const cyberContainer = document.getElementById("cyber-container");
@@ -241,7 +299,7 @@ setTimeout(() => {
           return;
         }
 
-        const imgSrc = 'https://mj.hiripple.com' + data.latest_image_url;
+        const imgSrc = MJ_URL + data.latest_image_url;
 
         const imgDiv = document.createElement('div');
         imgDiv.className = 'wp-block-image';
